@@ -1,7 +1,7 @@
 body{
-    background-image: url('../imgs/mu-tot.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
+    /*background-image: url('../imgs/mu-tot.jpg');*/
+    /*background-repeat: no-repeat;*/
+    /*background-size: cover;*/
 }
 h1{
     color: #59cb28;/* rgb(12,190,0)*/
@@ -13,6 +13,7 @@ h1{
     /* underline line-through overline none*/
     text-transform: none;
     /* uppercase lowercase capitalize none*/
+    text-shadow: -5px -5px 3px red;
 }
 p{
     font-size: 16px;
@@ -22,6 +23,11 @@ p{
     text-align: justify;
     /* left right center justify*/
     background-color: papayawhip;
+    border: 1px solid deeppink;
+    /* solid dotted dashed*/
+}
+span{
+    border: 1px solid deeppink;
 }
 img{
     max-width: 100%;
