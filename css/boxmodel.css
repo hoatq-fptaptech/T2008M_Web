@@ -1,0 +1,48 @@
+*{
+
+}
+body{
+    background-color: #f2f2f2;
+    color:#242424;
+    font-size: 14px;
+    line-height: 1.25;
+    font-weight: 400;
+    font-family: 'Roboto', sans-serif;
+}
+div{
+    width: 350px;
+    height: 350px;
+    /*border: 1px solid #888888;*/
+    padding: 15px;
+    float: left;/* left right none */
+    margin: 15px;
+    box-sizing: border-box;/* chi duoc su dung toi da 350px*/
+    overflow: hidden;
+    box-shadow: 0px 0px 5px #AAAAAA;
+    border-radius: 5px;
+    background-color: #ffffff;
+    text-align: center;
+}
+img{
+    max-width: 100%;
+}
+#nt{
+    width: 230px;
+    height: 350px;
+}
+div#nt img{
+    width: 200px;
+    height: auto;
+}
+#rec{
+    width: 30px;
+    height: 30px;
+    background-color: red;
+    border-radius: 100%;
+}
+#center{
+    float: none;
+    width: 200px;
+    background-color: darkseagreen;
+    margin: 10px auto;
+}
