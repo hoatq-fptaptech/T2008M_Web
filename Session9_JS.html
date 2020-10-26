@@ -93,26 +93,33 @@
             do{
                 x = parseInt(Math.random()*100);
             }while(lucky.includes(x) || isNaN(x));
-            lucky[i] = x;
+            lucky.push(x);
         }
         console.log(lucky);
         var myNumbers = []; // mang 5 so lua chon ko trung nhau
         for(let i=0;i<5;i++){
-            let x;
-            do{
-                x = prompt("Nhap so may man:");
-                x = parseInt(x);
-            }while (myNumbers.includes(x)|| isNaN(x));
-            myNumbers[i] =x;
+            myNumbers[i]=[];
+            for(let j=0;j<5;j++){
+                let x;
+                do{
+                    x = prompt("Nhap so may man:");
+                    x = parseInt(x);
+                }while (myNumbers[i].includes(x)|| isNaN(x));
+                myNumbers[i].push(x);
+            }
         }
         // kiem tra xem co trung giai
-        let sl = 0;
-        for(let i=0;i<5;i++){
-            if(lucky.includes(myNumbers[i]))
-                sl++;
+        for(let i=0;i<5;i++) {
+            let sl = 0;
+            for (let j = 0; j < 5;j++) {
+                if (lucky.includes(myNumbers[i][j]))
+                    sl++;
+            }
+            if (sl == 5){
+                alert("Chuc mung da trung thuong 100ty");
+                break;
+            }
         }
-        if(sl == 5)
-            alert("Chuc mung da trung thuong 100ty");
     </script>
 </body>
 </html>
