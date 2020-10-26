@@ -73,8 +73,46 @@
         // a19b -> NaN - not a number -> co ham isNaN() de kiem tra xem co phai NaN ko
         // 1a9 -> 1
         console.log(age);
-
+        do{
+            var a = prompt("Nhap so may man:");
+            a = parseInt(a);
+        }while(a<0|| a>99 || isNaN(a));
         // yeu cau nguoi dung phai nhap 1 so tu 0 -> 99
+        // tao 1 so ngau nhien trong 0-99
+        var luckynumber = parseInt(Math.random()*100);
+        // thong bao ket qua trung thuong
+        if(a == luckynumber){
+            alert("Chuc mung ban da trung thuong!");
+        }
+    </script>
+    <script type="text/javascript">
+        // Vietlot
+        var lucky = [];// mang 5 so ngau nhien ko trung nhau
+        for(let i=0;i<5;i++){
+            let x;
+            do{
+                x = parseInt(Math.random()*100);
+            }while(lucky.includes(x) || isNaN(x));
+            lucky[i] = x;
+        }
+        console.log(lucky);
+        var myNumbers = []; // mang 5 so lua chon ko trung nhau
+        for(let i=0;i<5;i++){
+            let x;
+            do{
+                x = prompt("Nhap so may man:");
+                x = parseInt(x);
+            }while (myNumbers.includes(x)|| isNaN(x));
+            myNumbers[i] =x;
+        }
+        // kiem tra xem co trung giai
+        let sl = 0;
+        for(let i=0;i<5;i++){
+            if(lucky.includes(myNumbers[i]))
+                sl++;
+        }
+        if(sl == 5)
+            alert("Chuc mung da trung thuong 100ty");
     </script>
 </body>
 </html>
