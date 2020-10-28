@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Demo JS with DOM</title>
+</head>
+<body>
+    <h1 id="heading1">Hello World!</h1>
+    <img id="img01" src="imgs/mu-tot.jpg"/>
+    <div id="logo"></div>
+    <script type="text/javascript">
+        function changeText() {
+            var head1 = document.getElementById("heading1") ;
+            head1.innerText = "Good Morning!";
+            head1.style.color = "red";
+            head1.style.fontSize = "30px"; // font-size
+            head1.style.backgroundColor = "orange";
+            // kiem tra
+            if(head1.classList.contains("heading")){
+                // xoa class
+                head1.classList.remove("heading");
+            }else{
+                // them class
+                head1.classList.add("heading");
+            }
+
+            // tac dong den img01
+            var im1 = document.getElementById("img01");
+            im1.src = "imgs/ngoc-trinh-lo-nhan-sac-that-khien-dan-tinh-ngo-ngang-40-.4473.jpg";
+
+        }
+        // thuc thi ham sau 3s
+        setTimeout(changeText,3000);
+
+        function AnHienNgocTrinh(){
+            var im1 = document.getElementById("img01");
+            if(im1.style.display == "none"){
+                im1.style.display = "block";
+            }else{
+                im1.style.display = "none";
+            }
+        }
+        //setInterval(AnHienNgocTrinh,1000);
+
+        function logo() {
+           var lg = document.getElementById("logo");
+           var ct = "<a href='#'><img src='imgs/anh-cuoc-song-1.jpg'/></a>";
+            lg.innerHTML = ct;
+        }
+        // logo();
+        setTimeout(logo,1000);
+    </script>
+</body>
+</html>
